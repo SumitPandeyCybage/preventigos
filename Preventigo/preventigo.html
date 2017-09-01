@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="CSS/normalize.css" rel="stylesheet">
@@ -9,10 +10,10 @@
     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
 </head>
 
-<body>
-    <header class="container-fluid" id="home">
+<body id="home">
+    <header class="container-fluid">
         <div class="wrapper row">
-            <h4 class="col-xs-12 col-sm-6">Welcome To Our <span>Company</span></h4>
+            <h4 class="col-xs-12 col-sm-6" style="padding: 0;">Welcome To Our <span>Company</span></h4>
             <div class="social-network col-xs-12 col-sm-6">
                 <ul class="social-icon pull-right">
                     <li>
@@ -39,30 +40,30 @@
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">LOGIN TO TEST YOUR PRODUCT</button>
     </div>
     <img src="IMAGES/burger-menu.png" class="burger menu-display" onclick="showMenu()">
-      <img src="IMAGES/close.png" class="close no-menu-display" onclick="showMenu()">
+    <img src="IMAGES/close.png" class="close no-menu-display" onclick="showMenu()">
     <section class="container-fluid navigation-header">
         <div class="row wrapper">
-            <p class="logo col-sm-2 col-xs-12">
-                <img src="IMAGES/logo.png">
-            </p>
-            <div class="col-sm-10 col-xs-12">
-                <nav class="pull-right">
-                    <ul id="nav-menu">
-                        <li><a data-scroll href="#home">HOME</a></li>
-                        <li><a data-scroll href="#about">ABOUT US</a></li>
-                        <li><a data-scroll href="#solutions">SOLUTIONS</a></li>
-                        <li><a data-scroll href="#testimonials">TESTIMONIALS</a></li>
-                        <li><a data-scroll href="#contact">CONTACT</a></li>
-                        <li><a data-scroll href="#contact">FOLLOW</a></li>
-                    </ul>
-                </nav>
+            <div class="logo">
+                <img src="IMAGES/logos.png">
             </div>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a data-scroll href="#home" onclick="showMenu()">HOME</a></li>
+                    <li><a data-scroll href="#about" onclick="hideMenu()">ABOUT US</a></li>
+                    <li><a data-scroll href="#solutions" onclick="hideMenu()">SOLUTIONS</a></li>
+                    <li><a data-scroll href="#testimonials" onclick="hideMenu()">TESTIMONIALS</a></li>
+                    <li><a data-scroll href="#contact" onclick="hideMenu()">CONTACT</a></li>
+                    <li><a data-scroll href="#follow" onclick="hideMenu()">FOLLOW</a></li>
+                </ul>
+            </nav>
         </div>
     </section>
     <section class="banner col-xs-12 bgimg-1">
         <div class="overlay flex">
             <div class="main-logo">
-                <img src="IMAGES/logo.png">
+                <!--   <img src="IMAGES/logo.png"> -->
+                <h1>PREVENTIGO</h1>
+                <h1>FULLY PROTECT YOUR BRAND FROM COUNTERFEITING</h1>
             </div>
         </div>
     </section>
@@ -161,7 +162,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div>
-                        <div id="loginbox" style="margin-top:150px;" class="mainbox col-md-12 col-sm-12">
+                        <div id="loginbox" style="margin-top:30px;" class="mainbox col-md-12 col-sm-12">
                             <div class="panel panel-info">
                                 <div class="panel-heading">
                                     <div class="panel-title">Sign In</div>
@@ -196,7 +197,7 @@
                                                 <a id="btn-fblogin" href="#" class="btn btn-primary">Login with Facebook</a>
                                                 <a id="btn-Gmail-login" href="#" class="btn btn-danger">Login with Gmail</a>
                                                 <a id="btn-Twitter-login" href="#" class="btn btn-info">Login with Twitter</a>
-
+                                                <a href="#" class="btn btn-warning" onclick="myFunction()">Back to home</a>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -213,7 +214,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="signupbox" style="display:none; margin-top:150px" class="mainbox col-md-12 col-sm-12">
+                        <div id="signupbox" style="display:none; margin-top:30px" class="mainbox col-md-12 col-sm-12">
                             <div class="panel panel-info">
                                 <div class="panel-heading">
                                     <div class="panel-title">Sign Up</div>
@@ -263,6 +264,8 @@
                                                 <button id="btn-fbsignup" type="button" style="margin-bottom: 10px;" class="btn btn-danger"><i class="icon-facebook"></i> � Sign Up with Gmail</button>
                                                 <br>
                                                 <button id="btn-fbsignup" type="button" class="btn btn-info" style="margin-bottom: 10px;"><i class="icon-facebook"></i> � Sign Up with Twitter</button>
+                                                <br>
+                                                <a href="#" class="btn btn-warning" onclick="myFunction()">Back to home</a>
                                             </div>
                                         </div>
                                     </form>
@@ -410,7 +413,7 @@
         </div>
     </section>
     <!--Pulling Awesome Font -->
-    <section>
+    <section id="follow">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <div class="col-md-12 social-icons">
             <ul class="social-network social-circle">
@@ -423,10 +426,15 @@
             <p>copyright&copy Preventigo 2017. All rights reserved.</p>
         </div>
     </section>
-    <script src="JS/autoChange.js"></script>
     <script src="JS/smooth-scroll.js"></script>
     <script src="JS/hamburger.js"></script>
+    <script src="JS/hide.js"></script>
     <script>
         smoothScroll.init();
+    </script>
+    <script>
+        function myFunction() {
+            location.reload();
+        }
     </script>
 </body>

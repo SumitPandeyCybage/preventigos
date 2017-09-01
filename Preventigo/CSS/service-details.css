@@ -25,10 +25,19 @@ body {
     font-family: Dosis, sans-serif;
 }
 
-body img {
+.bag img {
     width: 200px;
 }
 
+.logo img {
+    width: 100px;
+    position: absolute;
+    top: -33px;
+}
+
+.logo {
+    float: left;
+}
 .card div:first-child{
     border-right: 1px solid #000;
 }
@@ -161,12 +170,6 @@ header li:hover:before {
     font-size: 40px;
     left: 1px;
     position: relative;
-}
-
-.logo img{
-    width: 180px;
-    position: absolute;
-    top: -50px;
 }
 
 @media only screen and (min-width: 0px) and (max-width: 770px) {
